@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Genre Classifier</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>Movie Genre Classification</h1>
+
+            <p class="subtitle">
+                Enter a movie plot or description to predict its genre
+            </p>
+
+            <form action="/predict" method="POST">
+
+                <textarea 
+                    name="movie_description"
+                    placeholder="Enter movie description here..."
+                    required>
+                </textarea>
+
+                <button type="submit">
+                    Predict Genre
+                </button>
+
+            </form>
+
+            <!-- Result Section -->
+            <!-- Flask can render prediction here -->
+
+            <div class="result">
+
+                <h2>Predicted Genre</h2>
+
+                <p>{{ predicted_genre }}</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
