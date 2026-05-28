@@ -27,6 +27,10 @@ This repository contains code, notebooks, and resources for training and evaluat
    ```bash
    python train.py
    ```
+4. Running the app
+    ```bash
+   python app.py
+   ```
 
 ## Repository Structure
 
